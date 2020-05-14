@@ -182,6 +182,7 @@ namespace ScreenScraper
                 }
                 else if (loggedKey == Keys.F4)
                 {
+                    m_timer.Stop();
                     if (cbSaveName.Checked)
                     {
                         InputBox inputBox = new InputBox();
@@ -196,6 +197,7 @@ namespace ScreenScraper
                     SaveInfo();
                     if (cBSaveToFile.Checked)
                         SaveInfoToFile();
+                    m_timer.Start();
                 }
             }
         }
